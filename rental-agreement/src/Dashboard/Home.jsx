@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Home.module.css'
+import {Link} from 'react-router-dom'
+
 
 export default class Home extends React.Component{
     constructor(props){
@@ -11,23 +13,26 @@ export default class Home extends React.Component{
 
     render(){
         return (
-            <div className={`box ${styles.background}`}>
-               <div className={styles.header}>Welcome To Rent Easy! </div>
-               {/* <div style={{float:"left", margin:"80px 0px 0px 10%"}}><img src={"./homeImage2.png"} alt={"Image"}></img></div> */}
-               <div >
-                   <p className={styles.para}>
-                   <h1>Hey There!</h1>
-                    It's your destination to go paper and hastle free for 
-                   all the work you need to settle rent agreements!
-                   Here You can manage Your Rent very easily and quickly
-                   just by filling very few details manage your rental
-                   documents easily with our web portal convinient
-                   agreement signing on this platform without the hastle
-                   of physical presence</p>
-                   <div className={styles.btnDiv}><button>Click me!</button></div>
+           <div className={styles.main}>
+               <div>
+                    <h1 className={styles.heading}>
+                        Rent Easy
+                    </h1>
+                    <div className={styles.subheading}>
+                        Your dream home just a few clicks away.
+                    </div>
+                    <br></br>
+
+                    <div className={styles.list}>
+                            <h4>Get Your Rental Agreement within Minutes.</h4>
+                            <h4>E-sign your Rental Agreement.</h4>
+                            <h4>Enjoy Your Home.</h4>
+                        
+                    </div>
+                    <br></br>
+                    <Link to="/register" className={`btn btn-outline-success ${styles.registerbtn}`}>Register!</Link>
                </div>
-               
-            </div>
+           </div>
 
         )
     }
