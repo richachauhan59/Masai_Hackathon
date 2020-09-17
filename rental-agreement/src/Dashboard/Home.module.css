@@ -35,7 +35,16 @@
        width: 100%;
        padding: 20px;
    }
+   .list{
+       display: flex;
+       justify-content: space-between;
+   }
+
    .list h4{
        color: #124653;
        font-weight: bold;
    }
+   .list img:hover{
+       transform: skewX(1.1);
+   }
+   

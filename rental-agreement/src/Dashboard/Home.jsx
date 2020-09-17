@@ -24,9 +24,24 @@ export default class Home extends React.Component{
                     <br></br>
 
                     <div className={styles.list}>
-                            <h4>Get Your Rental Agreement within Minutes.</h4>
-                            <h4>E-sign your Rental Agreement.</h4>
+
+
+                        <div>
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/2912/2912778.svg" width="50px" alt="img"></img>
+                            <br></br>
+                            <h4>Rental Agreement.</h4>
+                        </div>
+                        <div>
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/1358/1358574.svg" width="50px"></img>
+                            <br></br>
+                            <h4>E-sign</h4>
+                        </div>
+                        <div>
+                            <img src="https://www.flaticon.com/svg/static/icons/svg/3010/3010995.svg" width="50px"></img>
+                            <br></br>
                             <h4>Enjoy Your Home.</h4>
+                        </div>
+
                         
                     </div>
                     <br></br>
