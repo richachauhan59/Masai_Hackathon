@@ -38,7 +38,7 @@ app.post('/screenshot', async (req, res) => {
 
    await page.click('.template-list-create-templatecard')
 
-   await page.waitForTimeout(5000);   
+   await page.waitForTimeout(7000);   
   
   //entering values in the form fields 
   await page.focus('.revv-inp')
@@ -67,7 +67,28 @@ app.post('/screenshot', async (req, res) => {
   await page.keyboard.type(req.body.email, {delay: 100})
   await page.keyboard.press('Enter')
 
-  await page.waitForTimeout(2000); 
+  // await page.keyboard.press('Tab')
+
+  // await page.keyboard.down('Control');
+  // await page.keyboard.press('A');
+  // await page.keyboard.up('Control');
+  // await page.keyboard.press('Backspace');
+
+  // await page.keyboard.type(req.body.fname, {delay: 100})
+  // await page.keyboard.press('Tab')
+
+  // await page.keyboard.down('Control');
+  // await page.keyboard.press('A');
+  // await page.keyboard.up('Control');
+  // await page.keyboard.press('Backspace');
+
+  //await page.keyboard.type(req.body.lname, {delay: 100})
+ //c await page.waitForTimeout(2000); 
+
+  //await page.click('.signer-add-button')
+
+
+  await page.waitForTimeout(3000); 
 
   await page.click('#signerdetails')
   await page.waitForTimeout(1000); 

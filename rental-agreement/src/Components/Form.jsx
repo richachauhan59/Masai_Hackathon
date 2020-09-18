@@ -10,7 +10,9 @@ class Form extends React.Component{
                 name:"",
                 contact:"",
                 address:"",
-                email:""
+                email:"",
+                fname:"",
+                lname:""
 
         }
     }
@@ -24,10 +26,12 @@ class Form extends React.Component{
             method:"post",
             url:"http://localhost:5000/screenshot",
             data:{
-                "name":this.state.name,
+                "name":this.state.fname+" "+this.state.lname,
                 "contact":this.state.contact,
                 "address":this.state.address,
-                "email":this.state.email
+                "email":this.state.email,
+                "fname":this.state.fname,
+                "lname":this.state.lname
             }
         })
         console.log(res)
@@ -49,8 +53,13 @@ class Form extends React.Component{
             <form className={styles.form} onSubmit={this.handleSubmit}>
 
                 <div className="form-group">
-                        <label htmlFor="name">Full Name </label>
-                        <input type="text" placeholder=" Full Name ( eg : Bruce Wayne)" value ={this.state.name} className="form-control" onChange={this.handleChange} id="name" ></input>
+                        <label htmlFor="name">First Name </label>
+                        <input type="text" placeholder=" First Name ( eg : Bruce )" value ={this.state.fname} className="form-control" onChange={this.handleChange} id="fname" ></input>
+                </div>
+
+                <div className="form-group">
+                        <label htmlFor="name">Last Name </label>
+                        <input type="text" placeholder=" Last Name ( eg : Wayne)" value ={this.state.lname} className="form-control" onChange={this.handleChange} id="lname" ></input>
                 </div>
 
                 <div className="form-group">
